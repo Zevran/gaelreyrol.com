@@ -1,0 +1,57 @@
+
+# SEO settings
+title: "Gaël"
+title2: "Reyrol" # default: ""
+description: "Blog d'un développeur & maker caennais"
+keywords: "Gaël Reyrol, développment, maker, caen, fullstack, devops"
+url: https://gaelreyrol.com # site url
+baseurl: "" # apply repo name if use it under gh-pages branch
+
+google_analytics: UA-82402577-1
+repo: http://github.com/Zevran
+disqus_shortname: "gaelreyrol"
+twitter_username: "GaelReyrol"
+comments: true
+
+# Build settings
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : rouge
+
+source: ./
+destination: ./_site
+
+# Sass configuration
+sass:
+  sass_dir: assets/scss
+  style: compressed # expanded
+
+# Author settings
+author:
+  name     : "Gaël Reyrol"
+  job      : "Développeur & Maker"
+  bio      : "Théoriquement, ça marche."
+  thumb    : /images/author.jpg
+  email    : gael.reyrol@gmail.com
+  url      : https://gaelreyrol.com
+  github   : http://github.com/Zevran
+  twitter  : http://twitter.com/GaelReyrol
+  linkedin : http://linkedin.com/in/gaelreyrol
+
+# social settings
+og_locale: "fr_FR"
+twitter_card: "summary_large_image"
+twitter_site: "@GaelReyrol"
+
+gems:
+  - bourbon
+  - jekyll-paginate
+
+# navbar pages
+navbar:
+  - slug : apropos
+    title: A propos
+  - slug : blog
+    title: Blog
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
