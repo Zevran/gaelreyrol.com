@@ -10,3 +10,13 @@ La programmation ainsi que l'informatique en général me passionne depuis mes 1
 
 Pendant ma scolarité à l'école j'y ai découvert l'impression 3D dans les différents [fablabs](https://fr.wikipedia.org/wiki/Fab_lab) et [hackerspaces](https://fr.wikipedia.org/wiki/Hackerspace) de la capitale, ce qui m'a conduit à
 la création de ma propre startup [Makeidea](https://makeidea.io) une plateforme de partage de modèles 3D à imprimer.
+
+Vous pouvez me retrouver sur :
+- [Github](https://github.com/Zevran)
+- [Twitter](https://twitter.com/GaelReyrol)
+- [Linkedin](https://linkedin.com/in/gaelreyrol)
+- [Keybase](https://keybase.io/zevran)
+
+<!-- De belles choses niveau making sont à venir sur Caen donc je vous recommande d'aller voir par là si ça vous intéresse -> [makelabs.xyz](https://makelabs.xyz) -->
+
+Et vous abonnez à ma newsletter 'Brain Wash' sur [Tinyletter](https://tinyletter.com/Zevran).
