@@ -17,7 +17,7 @@ pas assez d'expérience dans le domaine dans lequel je m'épanouissais et décou
 merveilles.
 
 Donc voilà, promis promis je vais essayer d'être le plus assidû possible en vous faisant
-part de mes péripéties en tant que développeur fullstack / devops au sein de la startup SoyHuCe
+part de mes expériences en tant que développeur fullstack / devops au sein de la startup SoyHuCe
 et en tant que passioné de développement / making à la maison et dans la région caennaise.
 
 Au programme, il y aura du partage de ressources, des tutoriels, des sélections, des bon
