@@ -19,4 +19,6 @@ Vous pouvez me retrouver sur :
 
 <!-- De belles choses niveau making sont à venir sur Caen donc je vous recommande d'aller voir par là si ça vous intéresse -> [makelabs.xyz](https://makelabs.xyz){:target="_blank"} -->
 
-Et vous abonnez à ma newsletter 'Brain Wash' sur [Tinyletter](https://tinyletter.com/Zevran){:target="_blank"}.
+Vous abonnez à ma newsletter 'Brain Wash' sur [Tinyletter](https://tinyletter.com/Zevran){:target="_blank"}.
+
+Et me contacter à l'adresse suivante -> [me@gaelreyrol.com](mailto:me@gaelreyrol.com)
