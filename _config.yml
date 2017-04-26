@@ -6,6 +6,7 @@ description: "Blog d'un développeur & maker caennais"
 keywords: "Gaël Reyrol, développment, maker, caen, fullstack, devops"
 url: https://gaelreyrol.com # site url
 baseurl: "" # apply repo name if use it under gh-pages branch
+cover: /assets/images/author.jpg
 
 google_analytics: UA-82402577-1
 repo: http://github.com/Zevran
@@ -31,8 +32,8 @@ author:
   name     : "Gaël Reyrol"
   job      : "Développeur & Maker"
   bio      : "Théoriquement, ça marche."
-  thumb    : /images/author.jpg
-  email    : gael.reyrol@gmail.com
+  thumb    : /assets/images/author.jpg
+  email    : me@gaelreyrol.com
   url      : https://gaelreyrol.com
   github   : http://github.com/Zevran
   twitter  : http://twitter.com/GaelReyrol
@@ -53,5 +54,7 @@ navbar:
     title: A propos
   - slug : blog
     title: Blog
+  - slug : projets
+    title: Projects
 
 exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
