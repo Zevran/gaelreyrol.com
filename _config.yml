@@ -15,7 +15,7 @@ twitter_username: "GaelReyrol"
 comments: true
 
 # Build settings
-permalink   : /:year/:title/
+permalink   : /:year/:month/:day/:title
 markdown    : kramdown
 highlighter : rouge
 

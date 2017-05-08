@@ -7,13 +7,13 @@
   {% assign page_title = '' %}
   {% if page.title == "Acceuil" %}
       {% capture page_title %}
-        {{ site.title }}{{ site.title2 }} | {{ site.description }}
+        {{ site.title }} {{ site.title2 }} | {{ site.description }}
         {%if paginator and paginator.page != 1 %} - {{ paginator.page }}{% endif %}
       {% endcapture %}
   {% else %}
       {% capture page_title %}
           {%if page.slug == 'category' %}Category: {% endif %}
-          {%if page.slug == 'tag' %}Tag: {% endif %} {{ page.title }} | {{ site.title }}{{ site.title2}}
+          {%if page.slug == 'tag' %}Tag: {% endif %} {{ page.title }} | {{ site.title }} {{ site.title2}}
       {% endcapture %}
   {% endif %}
   {% capture page_title %}
