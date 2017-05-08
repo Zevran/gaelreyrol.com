@@ -4,6 +4,7 @@ title: "Gérer ses secrets avec Vault"
 comments: true
 description: "Comment gérer des données sensibles en entreprise avec Vault"
 keywords: "vault, secrets, coffre-fort, startup, entreprise"
+cover: /assets/images/2017-05-08/vault.png
 ---
 
 ## Introduction
