@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gérer ses secrets avec Vault"
+title: "Gérer ses secrets avec Vault - 1ère partie"
 comments: true
 description: "Comment gérer des données sensibles en entreprise avec Vault"
 keywords: "vault, secrets, coffre-fort, startup, entreprise"
@@ -29,7 +29,7 @@ Bon ça c'était juste l'introduction histoire de vous mettre dans le bain, main
 
 ### Installation
 
-On commence par télécharger [Vault](https://www.vaultproject.io/downloads.html){:target="_blank"} en fonction de votre platforme, l'avantage c'est qu'il n'y a pas grand chose à faire puisque tout est embarqué dans un seul exécutable. 
+On commence par télécharger [Vault](https://www.vaultproject.io/downloads.html){:target="_blank"} en fonction de votre platforme, l'avantage c'est qu'il n'y a pas grand chose à faire puisque tout est embarqué dans un seul exécutable.
 
 ***Je travaille sous Mac Os donc pensez à adapter en fonction de votre OS :P***
 
@@ -156,8 +156,8 @@ Success! Deleted 'secret/johnsnow' if it existed.
 
 ---
 
-Je vous prie de m'excuser pour cet arrêt en cours de route mais le sujet étant 
-particulièrement velu je me suis aperçu qu'il serait plus facile 
+Je vous prie de m'excuser pour cet arrêt en cours de route mais le sujet étant
+particulièrement velu je me suis aperçu qu'il serait plus facile
 à comprendre pour vous et à faire pour moi en plusieurs parties :D.
 
 La suite arrivera je pense d'ici une semaine ou deux !
