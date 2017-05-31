@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Authentification & ACLs avec Vault - 2ème partie"
+title: "Authentification & Polices avec Vault - 2ème partie"
 comments: true
 description: "Comment gérer l'accès aux secrets via des polices avec Vault"
-keywords: "vault, secrets, coffre-fort, startup, entreprise, polices, acls, part 2"
+keywords: "vault, secrets, coffre-fort, startup, entreprise, polices, part 2"
 cover: /assets/images/2017-05-08/vault.png
 ---
 
@@ -21,7 +21,7 @@ conseille d'aller y faire un tour pour démarrer sur de bonnes bases dans ce gui
 [Gérer ses secrets avec Vault - 1ère partie](https://gaelreyrol.com/2017/05/08/gerer_ses_secrets_vault)
 
 Dans ce tutoriel nous allons voir comment il est possible de lier Vault à un système
-d'authentification afin de contrôler l'accès aux secrets via des ACLs.
+d'authentification afin de contrôler l'accès aux secrets via des polices.
 
 ## Pas à Pas
 
@@ -93,6 +93,33 @@ userpass/  userpass  system       system   replicated
 
 #### Création d'un utilisateur
 
-Pour ajouter un utilisateur il vous faudra créer celui-ci de la même manière qu'un secret sauf qu'au lieu d'écrire dans un chemin commençant par ```secret/``` il vous faudra écrire dans ```auth/userpass/users```. Vous pouvez obtenir des informations supplémentaires sur ce chemin en utilisant la commande ```vault path-help```.
+Pour ajouter un utilisateur il faudra créer celui-ci de la même manière qu'un secret sauf qu'au lieu d'écrire dans un chemin commençant par ```secret/``` il faudra écrire dans ```auth/userpass/users```. Vous pouvez obtenir des informations supplémentaires sur ce chemin en utilisant la commande ```vault path-help```.
+
+Vous allez donc créer votre utilisateur en renseignant son nom d'utilisateur à la fin du chemin, son mot de passe et les polices en paramètres.
+```bash
+$ vault write auth/userpass/users/gaelreyrol password=lovedevops policies=devops
+```
+```bash
+Success! Data written to: auth/userpass/users/gaelreyrol
+```
+Hop, notre utilisateur est fin prêt ! En revanche il nous manque la police ***devops*** qui va nous servir à définir des règles d'accès aux secrets.
+
+#### Création d'une police
+
+Les polices dans Vault permettent de définir des droits très précis sur les secrets. Les secrets sont construits sous forme d'arbre où chacun des noeuds est délémité par un ***/***, nous allons donc pouvoir appliquer des restrictions à ceux-ci en fonction d'une police.
+
+Nous avons à disposition 7 capacités décrivant toutes les actions possibles :
+- create: Création d'un secret
+- read: Lecture d'un secret
+- update: Modification d'un secret
+- delete: Suppression d'un secret
+- list: Lecture d'un noeud de secrets
+- sudo:
+- deny
+
+Certaines capacités regroupent plusieurs d'entre elles :
+- ***sudo***: create, read, update, delete, list, sudo
+- ***write***: create, read, update, delete, list
+- ***read***: read, list
 
 
