@@ -106,20 +106,104 @@ Hop, notre utilisateur est fin prêt ! En revanche il nous manque la police ***d
 
 #### Création d'une police
 
-Les polices dans Vault permettent de définir des droits très précis sur les secrets. Les secrets sont construits sous forme d'arbre où chacun des noeuds est délémité par un ***/***, nous allons donc pouvoir appliquer des restrictions à ceux-ci en fonction d'une police.
+Les polices dans Vault permettent de définir des droits très précis sur les secrets. Les secrets sont construits sous forme d'arbre où chacun des noeuds est délémité par un ***/***, nous allons donc pouvoir appliquer des restrictions/permissions à ceux-ci en fonction d'une police.
 
 Nous avons à disposition 7 capacités décrivant toutes les actions possibles :
-- create: Création d'un secret
-- read: Lecture d'un secret
-- update: Modification d'un secret
-- delete: Suppression d'un secret
-- list: Lecture d'un noeud de secrets
-- sudo:
-- deny
+- create: Création d'un secret.
+- read: Lecture d'un secret.
+- update: Modification d'un secret.
+- delete: Suppression d'un secret.
+- list: Énumération des secrets pour un chemin précis.
+- sudo: Donne accès à des chemins protégés par des droits root.
+- deny: Ne permet aucune action.
 
-Certaines capacités regroupent plusieurs d'entre elles :
-- ***sudo***: create, read, update, delete, list, sudo
-- ***write***: create, read, update, delete, list
-- ***read***: read, list
+Nous pouvons aussi définir des paramètres permis et non permis :
+- allowed_parameters
+- denied_parameters
 
+Ils permettent tout deux via un tableau d'élément de définir les clés et valeurs pouvant être modifiées, créées, supprimées ou non. Le petit bonus étant qu'ils supportent l'englobement en suffixe et préfixe.
 
+Enfin la dernière fonctionnalité liée aux polices est le TTL maximum et minimum via les attributs :
+- min_wrapping_ttl
+- max_wrapping_ttl
+
+Ils permettent de définir une durée vie minimum et maximum englobate des clés comprises par la police afin de forcer un élément à disparaitre ou d'être sur que d'autres éléments ne vont pas disparaître prématurément.
+
+Nous allons maintenant pouvoir créer notre première police !
+Pour cela nous allons créer un fichier ***devops.hcl***.
+
+Petite précision, un fichier [HCL](https://github.com/hashicorp/hcl) est un fichier de configuration HashiCorp dérivé du JSON.
+
+```
+path "secret/apps/*" {
+  capabilities = ["read", "create", "update", "list"]
+}
+
+path "secret/devops" {
+  capabilities = ["create"]
+  allowed_parameters = {
+    "*" = []
+  }
+  denied_parameters = {
+    "root" = []
+  }
+}
+```
+
+Nous voici donc avec une police qui permet la lecture, la création, la mise à jour et l'énumération sur tout ce qui sera compris dans le chemin ***secret/apps/***. Ainsi que la capacité à créer des secrets uniquement au niveau du chemin ***secret/devops*** avec n'importe quel nom de clé possible sauf ***root***.
+
+Maintenant il ne nous reste plus qu'à intégrer cette police dans vault. Pour cela nous allons utiliser la commande ***vault policy-write*** qui prend en premier argument le nom de la police et en deuxième le chemin vers le fichier.
+
+```bash
+$ vault policy-write devops ./devops.hcl
+```
+```
+Policy 'devops' written.
+```
+
+Vous pouvez à tout moment lister les polices dans vault via ```vault policies``` et afficher un police en particulier en ajouter son nom en argument.
+
+#### Mise à l'épreuve
+
+Maintenant que nous avons créer notre utilisateur et notre police, nous pouvons enfin tester si notre police fonctionne correctement.
+
+Tout d'abord nous devons nous authentifier avec l'utilisateur créé plus haut, pour cela il nous faut utiliser la commande ```vault auth``` suivit d'un argument ```-method``` permettant de préciser notre méthode d'authentification ainsi que d'un argument ```-username```pour préciser l'utilisateur en question. Il vous faudra renseigner le mot de passe inscrit plus haut.
+
+```bash
+$ vault auth -method=userpass username=gaelreyrol
+Password (will be hidden):
+```
+```bash
+Successfully authenticated! You are now logged in.
+The token below is already saved in the session. You do not
+need to "vault auth" again with the token.
+token: a8fdca6b-08a6-225d-95ac-2a0dbb405643
+token_duration: 2764799
+token_policies: [default devops]
+```
+
+À l'issue de cette authentification nous voyons bien que Vault nous a attaché à la police devops au niveau du champ ***token_policies***.
+
+Pour tester notre police il nous suffit juste d'effectuer des actions au niveau des chemins explicités dans notre fichier car Vault applique la règle de liste noire. Tout ce qui n'est pas clairement défini est refusé par défaut.
+
+Quelques exemples:
+```bash
+$ vault write secret/apps/postgres user=monapp password=$(openssl rand -base64 12)
+$ vault read secret/apps/postgres
+$ vault list secret/apps
+$ vault delete secret/apps/postgres
+$ vault list secret/devops
+$ vault write secret/devops apps=[postgres]
+$ vault read secret/devops
+$ vault write secret/devops root=test
+```
+
+Je vous laisse le soin de mettre à l'épreuve Vault et de jouer avec les polices, capacités et paramètres.
+
+---
+
+Ce deuxième tutoriel sur Vault est terminé, j'espère qu'il vous sera utile et que vous saurez vous projeter dans une utilisation professionnelle de cet outil incroyablement puissant.
+
+Le prochain tutoriel Vault portera sur son déploiement en production mais ça ne sera probablement pas le prochain article.
+
+N’hésitez pas à partager et réagir à cet article dans les commentaires ou par mail :)
