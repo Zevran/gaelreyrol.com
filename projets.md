@@ -6,6 +6,9 @@ permalink: /projets/
 
 Voici une petite liste de mes projets :
 
+##### [grafana-hcl(wip)](https://github.com/Zevran/grafana-hcl){:target="_blank"}
+Un outil pour générer des graphiques et dashboards [Grafana](https://grafana.com/){:target="_blank"} à partir du langage déclaratif [HCL](https://github.com/hashicorp/hcl){:target="_blank"}.
+
 ##### [language-prometheus](https://github.com/Zevran/language-prometheus){:target="_blank"}
 Un plugin [Atom](https://atom.io/){:target="_blank"} pour les règles d'alertes [Prometheus](https://prometheus.io/){:target="_blank"}.
 
