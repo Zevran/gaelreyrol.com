@@ -4,7 +4,7 @@ title: A propos
 permalink: /apropos/
 ---
 
-Je m'appelle Gaël Reyrol, j'ai 23 ans, je [niaise](https://fr.wiktionary.org/wiki/niaiser){:target="_blank"} à Caen et je suis développeur [fullstack](https://fr.wikipedia.org/wiki/D%C3%A9veloppeur_full_stack){:target="_blank"} ainsi que [devops](https://fr.wikipedia.org/wiki/Devops){:target="_blank"} depuis un an au sein de la startup [SoyHuCe](https://soyhuce.fr).
+Je m'appelle Gaël Reyrol, j'ai 23 ans, je [niaise](https://fr.wiktionary.org/wiki/niaiser){:target="_blank"} à Caen et je suis développeur [fullstack](https://fr.wikipedia.org/wiki/D%C3%A9veloppeur_full_stack){:target="_blank"} ainsi que [devops](https://fr.wikipedia.org/wiki/Devops){:target="_blank"} depuis deux ans au sein de la startup [SoyHuCe](https://soyhuce.fr).
 
 La programmation ainsi que l'informatique en général me passionne depuis mes 12, 13 ans en commençant par des serveurs privés [World of Warcraft](https://fr.wikipedia.org/wiki/World_of_Warcraft). J'ai intégré l'École [42](http://www.42.fr/){:target="_blank"} à son lancement en 2013.
 
