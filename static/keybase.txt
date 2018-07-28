@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/zevran
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://gaelreyrol.com
+  * I am zevran (https://keybase.io/zevran) on keybase.
+  * I have a public key ASDYlqq0UYohyutzaEUU_A_FvlkJgUCphnz6SVxRKo_Dugo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101d10b7b45869f1d9e8e53f7a6b0a2f2441d3544c39b26afacfddc487d100224180a",
+            "host": "keybase.io",
+            "kid": "0120d896aab4518a21caeb73684514fc0fc5be59098140a9867cfa495c512a8fc3ba0a",
+            "uid": "db68cd86ebd7ccf14d218d1773b91f19",
+            "username": "zevran"
+        },
+        "service": {
+            "hostname": "gaelreyrol.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.21"
+    },
+    "ctime": 1493199125,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1493198979,
+        "hash": "93378946cb11a389eb437f0ad58e4ec5ff26ae1a3be73ad21489b59c0d01f1e74bdc59a7c53f91d5f35fbe90b570aa7a249448462c92fb1428d706eead25dd96",
+        "seqno": 1038844
+    },
+    "prev": "56cdfad30bfc77e10e20351d4a7e64118908994480e0d33d8f006dba535251d5",
+    "seqno": 39,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg2JaqtFGKIcrrc2hFFPwPxb5ZCYFAqYZ8+klcUSqPw7oKp3BheWxvYWTFAvZ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxZDEwYjdiNDU4NjlmMWQ5ZThlNTNmN2E2YjBhMmYyNDQxZDM1NDRjMzliMjZhZmFjZmRkYzQ4N2QxMDAyMjQxODBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZDg5NmFhYjQ1MThhMjFjYWViNzM2ODQ1MTRmYzBmYzViZTU5MDk4MTQwYTk4NjdjZmE0OTVjNTEyYThmYzNiYTBhIiwidWlkIjoiZGI2OGNkODZlYmQ3Y2NmMTRkMjE4ZDE3NzNiOTFmMTkiLCJ1c2VybmFtZSI6InpldnJhbiJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiZ2FlbHJleXJvbC5jb20iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMSJ9LCJjdGltZSI6MTQ5MzE5OTEyNSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDkzMTk4OTc5LCJoYXNoIjoiOTMzNzg5NDZjYjExYTM4OWViNDM3ZjBhZDU4ZTRlYzVmZjI2YWUxYTNiZTczYWQyMTQ4OWI1OWMwZDAxZjFlNzRiZGM1OWE3YzUzZjkxZDVmMzVmYmU5MGI1NzBhYTdhMjQ5NDQ4NDYyYzkyZmIxNDI4ZDcwNmVlYWQyNWRkOTYiLCJzZXFubyI6MTAzODg0NH0sInByZXYiOiI1NmNkZmFkMzBiZmM3N2UxMGUyMDM1MWQ0YTdlNjQxMTg5MDg5OTQ0ODBlMGQzM2Q4ZjAwNmRiYTUzNTI1MWQ1Iiwic2Vxbm8iOjM5LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQD8R+F6L2DNvSgBnRjPWEMfy6SmeN5LLNfxOeFLzOr5h3Tk8MBV1+dAzDqbAIG2Z2tI4m7N6XCocg1641OjvZgGoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCAeCSGlklV3JVDhb4aOJPfWsP90C5uu2T20B0yk8x7pAqN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/zevran
+
+==================================================================
