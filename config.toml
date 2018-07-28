@@ -1,0 +1,68 @@
+baseURL = "https://gaelreyrol.com"
+title = "Gaël Reyrol"
+theme = "coder"
+languageCode = "fr"
+defaultcontentlanguage = "fr"
+
+paginate = 20
+canonifyurls = true
+enableEmoji = true
+
+pygmentsstyle = "solarized-dark"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+googleAnalytics = "UA-82402577-1"
+disqusShortname = "gaelreyrol"
+
+[params]
+    author = "Gaël Reyrol"
+    info = "Développeur Fullstack, DevOps & Maker"
+    description = "Blog personnel de Gaël Reyrol, développeur et maker, caennais"
+    keywords = "blog,personnel,développeur,maker,caen"
+    avatarurl = "images/avatar.png"
+
+    footercontent = "Théoriquement, ça fonctionne."
+
+    hideCredits = false
+    hideCopyright = false
+
+    custom_css = []
+
+    rtl = false
+
+    langseparator = "|"
+
+[[params.social]]
+    name = "Github"
+    weight = 1
+    url = "https://github.com/Zevran"
+[[params.social]]
+    name = "Gitlab"
+    weight = 2
+    url = "https://gitlab.com/Zevran"
+[[params.social]]
+    name = "Twitter"
+    weight = 3
+    url = "https://twitter.com/GaelReyrol"
+[[params.social]]
+    name = "LinkedIn"
+    weight = 4
+    url = "https://linkedin.com/in/gaelreyrol"
+[[params.social]]
+    name = "Keybase"
+    weight = 5
+    url = "https://keybase.io/zevran"
+
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "À propos"
+    weight = 2
+    url = "/about/"
+[[menu.main]]
+    name = "Projets"
+    weight = 3
+    url = "/projects/"
