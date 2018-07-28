@@ -9,7 +9,7 @@ baseurl: "" # apply repo name if use it under gh-pages branch
 cover: /assets/images/author.jpg
 
 google_analytics: UA-82402577-1
-repo: http://github.com/Zevran
+repo: https://github.com/Zevran
 disqus_shortname: "gaelreyrol"
 twitter_username: "GaelReyrol"
 comments: true
@@ -35,9 +35,9 @@ author:
   thumb    : /assets/images/author.jpg
   email    : me@gaelreyrol.com
   url      : https://gaelreyrol.com
-  github   : http://github.com/Zevran
-  twitter  : http://twitter.com/GaelReyrol
-  linkedin : http://linkedin.com/in/gaelreyrol
+  github   : https://github.com/Zevran
+  twitter  : https://twitter.com/GaelReyrol
+  linkedin : https://linkedin.com/in/gaelreyrol
 
 # social settings
 og_locale: "fr_FR"

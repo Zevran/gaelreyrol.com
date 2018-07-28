@@ -6,8 +6,11 @@ permalink: /projets/
 
 Voici une petite liste de mes projets :
 
-##### [grafana-hcl(wip)](https://github.com/Zevran/grafana-hcl){:target="_blank"}
-Un outil pour générer des graphiques et dashboards [Grafana](https://grafana.com/){:target="_blank"} à partir du langage déclaratif [HCL](https://github.com/hashicorp/hcl){:target="_blank"}.
+##### [roller-derby-fresh-meat](https://github.com/Zevran/roller-derby-fresh-meat){:target="_blank"}
+Une application mobile crée avec [Exponent](https://expo.io/) en [React Native](https://facebook.github.io/react-native/) à destination des joueurs, joueuses de Roller Derby.
+
+##### [grafana-hcl](https://github.com/Zevran/grafana-hcl){:target="_blank"}
+Un outil pour générer des graphiques et dashboards [Grafana](https://grafana.com/){:target="_blank"} à partir du langage déclaratif [HCL](https://github.com/hashicorp/hcl){:target="_blank"} (non terminé).
 
 ##### [language-prometheus](https://github.com/Zevran/language-prometheus){:target="_blank"}
 Un plugin [Atom](https://atom.io/){:target="_blank"} pour les règles d'alertes [Prometheus](https://prometheus.io/){:target="_blank"}.
