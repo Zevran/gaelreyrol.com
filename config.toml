@@ -16,6 +16,16 @@ pygmentscodefencesguesssyntax = true
 googleAnalytics = "UA-82402577-1"
 disqusShortname = "gaelreyrol"
 
+[privacy]
+    [privacy.googleAnalytics]
+        anonymizeIP = true
+        respectDoNotTrack = true
+        useSessionStorage = true
+
+    [privacy.twitter]
+        enableDNT = true
+        simple = true
+
 [params]
     author = "Gaël Reyrol"
     info = "Développeur Fullstack, DevOps & Maker"
