@@ -16,32 +16,6 @@
 
     <link rel="canonical" href="https://gaelreyrol.com/tags/daemon/">
 
-    <meta property="og:title" content="Daemon" />
-<meta property="og:description" content="Blog personnel de Gaël Reyrol, développeur et maker, caennais" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://gaelreyrol.com/tags/daemon/" />
-
-
-
-<meta property="og:updated_time" content="2017-09-17T00:00:00&#43;02:00"/>
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Daemon"/>
-<meta name="twitter:description" content="Blog personnel de Gaël Reyrol, développeur et maker, caennais"/>
-
-
     <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
     <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
     <link rel="stylesheet" href="https://gaelreyrol.com/css/style.min.css">
@@ -130,14 +104,24 @@
 
     
 <script>
-var doNotTrack = false;
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
 if (!doNotTrack) {
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-82402577-1', 'auto');
-	
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-82402577-1', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>

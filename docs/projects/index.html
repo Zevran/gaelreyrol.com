@@ -16,44 +16,6 @@
 
     <link rel="canonical" href="https://gaelreyrol.com/projects/">
 
-    <meta property="og:title" content="Projets" />
-<meta property="og:description" content="roller-derby-fresh-meat Une application mobile crée avec Exponent en React Native à destination des joueurs, joueuses de Roller Derby.
-grafana-hcl Un outil pour générer des graphiques et dashboards Grafana à partir du langage déclaratif HCL (non terminé).
-language-prometheus Un plugin Atom pour les règles d&rsquo;alertes Prometheus.
-materialize-loader Un loader Webpack pour charger le Sass de la librairie Materialize.
-vue-rollbar Un plugin pour intégrer Rollbar à l&rsquo;instanciation de Vue.js.
-twisto-node-api Une librairie Node." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://gaelreyrol.com/projects/" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Projets"/>
-<meta name="twitter:description" content="roller-derby-fresh-meat Une application mobile crée avec Exponent en React Native à destination des joueurs, joueuses de Roller Derby.
-grafana-hcl Un outil pour générer des graphiques et dashboards Grafana à partir du langage déclaratif HCL (non terminé).
-language-prometheus Un plugin Atom pour les règles d&rsquo;alertes Prometheus.
-materialize-loader Un loader Webpack pour charger le Sass de la librairie Materialize.
-vue-rollbar Un plugin pour intégrer Rollbar à l&rsquo;instanciation de Vue.js.
-twisto-node-api Une librairie Node."/>
-
-
     <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
     <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
     <link rel="stylesheet" href="https://gaelreyrol.com/css/style.min.css">
@@ -164,14 +126,24 @@ twisto-node-api Une librairie Node."/>
 
     
 <script>
-var doNotTrack = false;
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
 if (!doNotTrack) {
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-82402577-1', 'auto');
-	
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-82402577-1', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
