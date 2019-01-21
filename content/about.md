@@ -3,7 +3,7 @@ title = "À propos"
 slug = "about"
 +++
 
-Je m'appelle Gaël Reyrol, j'ai 24 ans, je [niaise](https://fr.wiktionary.org/wiki/niaiser) à Caen et je suis développeur [fullstack](https://fr.wikipedia.org/wiki/D%C3%A9veloppeur_full_stack) ainsi que [devops](https://fr.wikipedia.org/wiki/Devops) depuis bientôt trois ans au sein de la startup [SoyHuCe](https://soyhuce.fr).
+Je m'appelle Gaël Reyrol, j'ai 24 ans, je [niaise](https://fr.wiktionary.org/wiki/niaiser) à Caen et je suis développeur [fullstack](https://fr.wikipedia.org/wiki/D%C3%A9veloppeur_full_stack) ainsi que [devops](https://fr.wikipedia.org/wiki/Devops), chez [Dans Ma Culotte](https://dansmaculotte.com).
 
 La programmation ainsi que l'informatique en général me passionne depuis mes 12, 13 ans en commençant par des serveurs privés [World of Warcraft](https://fr.wikipedia.org/wiki/World_of_Warcraft). J'ai intégré l'École [42](http://www.42.fr/) à son lancement en 2013.
 
