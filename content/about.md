@@ -17,6 +17,7 @@ Vous pouvez me retrouver sur :
 - [Twitter](https://twitter.com/GaelReyrol)
 - [Linkedin](https://linkedin.com/in/gaelreyrol)
 - [Keybase](https://keybase.io/zevran)
+- [Brow Bag Lunch](http://www.brownbaglunch.fr/baggers.html#gael-reyrol)
 
 <!-- De belles choses niveau making sont à venir sur Caen donc je vous recommande d'aller voir par là si ça vous intéresse -> [makelabs.xyz](https://makelabs.xyz) -->
 
