@@ -87,3 +87,7 @@ disqusShortname = "gaelreyrol"
     name = "Projets"
     weight = 3
     url = "/projects/"
+[[menu.main]]
+    name = "Services"
+    weight = 4
+    url = "/services/"

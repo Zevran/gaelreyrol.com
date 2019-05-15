@@ -6,21 +6,13 @@
     <description>Recent content in Categories on Gaël Reyrol</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
+    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://gaelreyrol.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Divers</title>
-      <link>https://gaelreyrol.com/categories/divers/</link>
-      <pubDate>Wed, 06 Sep 2017 00:00:00 +0200</pubDate>
-      
-      <guid>https://gaelreyrol.com/categories/divers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Openvpn</title>
+      <title>openvpn</title>
       <link>https://gaelreyrol.com/categories/openvpn/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
       
@@ -29,7 +21,16 @@
     </item>
     
     <item>
-      <title>Sécurité</title>
+      <title>divers</title>
+      <link>https://gaelreyrol.com/categories/divers/</link>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 +0200</pubDate>
+      
+      <guid>https://gaelreyrol.com/categories/divers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sécurité</title>
       <link>https://gaelreyrol.com/categories/s%C3%A9curit%C3%A9/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0200</pubDate>
       
