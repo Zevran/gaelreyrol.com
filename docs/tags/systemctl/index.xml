@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Systemctl on Gaël Reyrol</title>
+    <title>systemctl on Gaël Reyrol</title>
     <link>https://gaelreyrol.com/tags/systemctl/</link>
-    <description>Recent content in Systemctl on Gaël Reyrol</description>
+    <description>Recent content in systemctl on Gaël Reyrol</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0200</lastBuildDate>
