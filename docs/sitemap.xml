@@ -38,13 +38,13 @@
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/openvpn/</loc>
+    <loc>https://gaelreyrol.com/categories/openvpn/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/categories/openvpn/</loc>
+    <loc>https://gaelreyrol.com/tags/openvpn/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -196,6 +196,10 @@
   
   <url>
     <loc>https://gaelreyrol.com/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://gaelreyrol.com/services/</loc>
   </url>
   
   <url>

@@ -87,6 +87,17 @@ twisto-node-api Une librairie Node.</description>
     </item>
     
     <item>
+      <title>Services</title>
+      <link>https://gaelreyrol.com/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaelreyrol.com/services/</guid>
+      <description>Je propose 3 services complémentaires dans la région de Caen en rapport avec mon expérience en matière d&amp;rsquo;infrastructure, d&amp;rsquo;architecture cloud et de développement (DevOps).
+Ces services sont :
+ Diagnostique: Rédaction d&amp;rsquo;un document ouvrant sur les perspectives d&amp;rsquo;évolution, d&amp;rsquo;amélioration et de migration à l&amp;rsquo;aide de différents documents transmis au préalable (DAT, diagrammes, contraintes etc) et des problématiques évoquées suite à de multiples échanges (latences, TTFB, scalabilité, etc) ainsi qu&amp;rsquo;un plan d&amp;rsquo;exécution en corélation avec les solutions proposées.</description>
+    </item>
+    
+    <item>
       <title>À propos</title>
       <link>https://gaelreyrol.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
