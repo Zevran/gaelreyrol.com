@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Gaël Reyrol</title>
-    <link>https://gaelreyrol.com/categories/</link>
+    <link>https://gaelreyrol.dev/categories/</link>
     <description>Recent content in Categories on Gaël Reyrol</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://gaelreyrol.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gaelreyrol.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>openvpn</title>
-      <link>https://gaelreyrol.com/categories/openvpn/</link>
+      <link>https://gaelreyrol.dev/categories/openvpn/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/categories/openvpn/</guid>
+      <guid>https://gaelreyrol.dev/categories/openvpn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>divers</title>
-      <link>https://gaelreyrol.com/categories/divers/</link>
+      <link>https://gaelreyrol.dev/categories/divers/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/categories/divers/</guid>
+      <guid>https://gaelreyrol.dev/categories/divers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sécurité</title>
-      <link>https://gaelreyrol.com/categories/s%C3%A9curit%C3%A9/</link>
+      <link>https://gaelreyrol.dev/categories/s%C3%A9curit%C3%A9/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/categories/s%C3%A9curit%C3%A9/</guid>
+      <guid>https://gaelreyrol.dev/categories/s%C3%A9curit%C3%A9/</guid>
       <description></description>
     </item>
     

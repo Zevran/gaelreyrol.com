@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>daemon on Gaël Reyrol</title>
-    <link>https://gaelreyrol.com/tags/daemon/</link>
+    <link>https://gaelreyrol.dev/tags/daemon/</link>
     <description>Recent content in daemon on Gaël Reyrol</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://gaelreyrol.com/tags/daemon/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gaelreyrol.dev/tags/daemon/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Démon OpenVPN sur Ubuntu</title>
-      <link>https://gaelreyrol.com/posts/daemon-openvpn-ubuntu/</link>
+      <link>https://gaelreyrol.dev/posts/daemon-openvpn-ubuntu/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/posts/daemon-openvpn-ubuntu/</guid>
+      <guid>https://gaelreyrol.dev/posts/daemon-openvpn-ubuntu/</guid>
       <description>Comment lancer un démon client OpenVPN sur Ubuntu Oui je sais c&amp;rsquo;est mon premier tutoriel de la rentrée et celui-ci n&amp;rsquo;a plus ou moins rien avoir avec le DevOps. Je me suis décidé à faire ce tutoriel parce que j&amp;rsquo;ai remarqué qu&amp;rsquo;il y avait beaucoup de tutoriels sur comment créer un serveur VPN mais quasiment aucun sur comment se connecter à ceux-ci et encore moins depuis un serveur dédié ou sans GUI.</description>
     </item>
     

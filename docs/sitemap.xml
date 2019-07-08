@@ -3,207 +3,207 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gaelreyrol.com/categories/</loc>
+    <loc>https://gaelreyrol.dev/categories/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/posts/daemon-openvpn-ubuntu/</loc>
+    <loc>https://gaelreyrol.dev/posts/daemon-openvpn-ubuntu/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/</loc>
-    <lastmod>2017-09-17T00:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://gaelreyrol.com/posts/</loc>
+    <loc>https://gaelreyrol.dev/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/</loc>
+    <loc>https://gaelreyrol.dev/posts/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/daemon/</loc>
+    <loc>https://gaelreyrol.dev/tags/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/categories/openvpn/</loc>
+    <loc>https://gaelreyrol.dev/tags/daemon/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/openvpn/</loc>
+    <loc>https://gaelreyrol.dev/categories/openvpn/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/systemctl/</loc>
+    <loc>https://gaelreyrol.dev/tags/openvpn/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/ubuntu/</loc>
+    <loc>https://gaelreyrol.dev/tags/systemctl/</loc>
     <lastmod>2017-09-17T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/posts/reprise-des-hostilites/</loc>
+    <loc>https://gaelreyrol.dev/tags/ubuntu/</loc>
+    <lastmod>2017-09-17T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaelreyrol.dev/posts/reprise-des-hostilites/</loc>
     <lastmod>2017-09-06T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/cd/</loc>
-    <lastmod>2017-09-06T00:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://gaelreyrol.com/tags/ci/</loc>
+    <loc>https://gaelreyrol.dev/tags/cd/</loc>
     <lastmod>2017-09-06T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/devops/</loc>
+    <loc>https://gaelreyrol.dev/tags/ci/</loc>
     <lastmod>2017-09-06T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/categories/divers/</loc>
+    <loc>https://gaelreyrol.dev/tags/devops/</loc>
     <lastmod>2017-09-06T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/jenkins/</loc>
+    <loc>https://gaelreyrol.dev/categories/divers/</loc>
     <lastmod>2017-09-06T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/rancher/</loc>
+    <loc>https://gaelreyrol.dev/tags/jenkins/</loc>
     <lastmod>2017-09-06T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/terraform/</loc>
+    <loc>https://gaelreyrol.dev/tags/rancher/</loc>
     <lastmod>2017-09-06T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/posts/authentification-polices-vault-part2/</loc>
+    <loc>https://gaelreyrol.dev/tags/terraform/</loc>
+    <lastmod>2017-09-06T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaelreyrol.dev/posts/authentification-polices-vault-part2/</loc>
     <lastmod>2017-06-07T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/coffre-fort/</loc>
+    <loc>https://gaelreyrol.dev/tags/coffre-fort/</loc>
     <lastmod>2017-06-07T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/entreprise/</loc>
+    <loc>https://gaelreyrol.dev/tags/entreprise/</loc>
     <lastmod>2017-06-07T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/hashicorp/</loc>
+    <loc>https://gaelreyrol.dev/tags/hashicorp/</loc>
     <lastmod>2017-06-07T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/secrets/</loc>
+    <loc>https://gaelreyrol.dev/tags/secrets/</loc>
     <lastmod>2017-06-07T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/startup/</loc>
+    <loc>https://gaelreyrol.dev/tags/startup/</loc>
     <lastmod>2017-06-07T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/categories/s%C3%A9curit%C3%A9/</loc>
+    <loc>https://gaelreyrol.dev/categories/s%C3%A9curit%C3%A9/</loc>
     <lastmod>2017-06-07T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/vault/</loc>
+    <loc>https://gaelreyrol.dev/tags/vault/</loc>
     <lastmod>2017-06-07T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/posts/gerer-ses-secrets-vault-part1/</loc>
+    <loc>https://gaelreyrol.dev/posts/gerer-ses-secrets-vault-part1/</loc>
     <lastmod>2017-05-08T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/posts/10-projets-kickstarter/</loc>
+    <loc>https://gaelreyrol.dev/posts/10-projets-kickstarter/</loc>
     <lastmod>2017-04-12T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/crowdfunding/</loc>
-    <lastmod>2017-04-12T00:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://gaelreyrol.com/tags/kickstarter/</loc>
+    <loc>https://gaelreyrol.dev/tags/crowdfunding/</loc>
     <lastmod>2017-04-12T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/projects/</loc>
+    <loc>https://gaelreyrol.dev/tags/kickstarter/</loc>
     <lastmod>2017-04-12T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/posts/lancement-du-blog/</loc>
+    <loc>https://gaelreyrol.dev/tags/projects/</loc>
+    <lastmod>2017-04-12T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaelreyrol.dev/posts/lancement-du-blog/</loc>
     <lastmod>2017-04-03T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/tags/lancement/</loc>
+    <loc>https://gaelreyrol.dev/tags/lancement/</loc>
     <lastmod>2017-04-03T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/projects/</loc>
+    <loc>https://gaelreyrol.dev/projects/</loc>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/services/</loc>
+    <loc>https://gaelreyrol.dev/services/</loc>
   </url>
   
   <url>
-    <loc>https://gaelreyrol.com/about/</loc>
+    <loc>https://gaelreyrol.dev/about/</loc>
   </url>
   
 </urlset>

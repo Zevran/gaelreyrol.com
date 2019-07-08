@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>startup on Gaël Reyrol</title>
-    <link>https://gaelreyrol.com/tags/startup/</link>
+    <link>https://gaelreyrol.dev/tags/startup/</link>
     <description>Recent content in startup on Gaël Reyrol</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Wed, 07 Jun 2017 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://gaelreyrol.com/tags/startup/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gaelreyrol.dev/tags/startup/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Authentification &amp; Polices avec Vault - 2ème partie</title>
-      <link>https://gaelreyrol.com/posts/authentification-polices-vault-part2/</link>
+      <link>https://gaelreyrol.dev/posts/authentification-polices-vault-part2/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/posts/authentification-polices-vault-part2/</guid>
+      <guid>https://gaelreyrol.dev/posts/authentification-polices-vault-part2/</guid>
       <description>Introduction C&amp;rsquo;est parti pour un second tutoriel !
 Dans le guide précédent j&amp;rsquo;ai passé en revue les grands principes de Vault qui font de lui un outil sûr et adéquat pour gérer ses secrets en entreprise ainsi que les étapes de base nécessaire à son utilisation en terminant par la création, la lecture et la suppression d&amp;rsquo;un secret. Si vous ne connaissez pas Vault et que vous n&amp;rsquo;avez pas lu la partie précédente, je vous conseille d&amp;rsquo;aller y faire un tour pour démarrer sur de bonnes bases dans ce guide.</description>
     </item>
     
     <item>
       <title>Gérer ses secrets avec Vault - 1ère partie</title>
-      <link>https://gaelreyrol.com/posts/gerer-ses-secrets-vault-part1/</link>
+      <link>https://gaelreyrol.dev/posts/gerer-ses-secrets-vault-part1/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/posts/gerer-ses-secrets-vault-part1/</guid>
+      <guid>https://gaelreyrol.dev/posts/gerer-ses-secrets-vault-part1/</guid>
       <description>Introduction La gestion des secrets, clés API et autres données sensibles est une question délicate et réccurente au sein d&amp;rsquo;une startup, d&amp;rsquo;une entreprise.
 Je pense que beaucoup on eu à faire à ce cas de figure où certains secrets sont stockés dans un fichier au minimum chiffré (dans le cas contraire c&amp;rsquo;est grave), ce même fichier étant sur un stockage interne centralisé (voir externe) afin que tout le monde y ai accès.</description>
     </item>

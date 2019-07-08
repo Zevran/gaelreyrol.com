@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lancement on Gaël Reyrol</title>
-    <link>https://gaelreyrol.com/tags/lancement/</link>
+    <link>https://gaelreyrol.dev/tags/lancement/</link>
     <description>Recent content in lancement on Gaël Reyrol</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Mon, 03 Apr 2017 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://gaelreyrol.com/tags/lancement/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gaelreyrol.dev/tags/lancement/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lancement du blog</title>
-      <link>https://gaelreyrol.com/posts/lancement-du-blog/</link>
+      <link>https://gaelreyrol.dev/posts/lancement-du-blog/</link>
       <pubDate>Mon, 03 Apr 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/posts/lancement-du-blog/</guid>
+      <guid>https://gaelreyrol.dev/posts/lancement-du-blog/</guid>
       <description>Pour être tout à fait franc c&amp;rsquo;est la je ne sais combientième fois que j&amp;rsquo;écris un premier article de blog et que celui-ci devient le dernier.
 Pour quelle raison alors ? Eh bien parce que finalement je n&amp;rsquo;avais pas grand chose à raconter, enfin plutôt peu ou pas assez d&amp;rsquo;expérience dans le domaine dans lequel je m&amp;rsquo;épanouissais et découvrais monts et merveilles.
 Donc voilà, promis promis je vais essayer d&amp;rsquo;être le plus assidû possible en vous faisant part de mes expériences en tant que développeur fullstack / devops au sein de la startup SoyHuCe et en tant que passioné de développement / making à la maison et dans la région caennaise.</description>
