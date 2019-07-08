@@ -2,192 +2,192 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Gaël Reyrol</title>
-    <link>https://gaelreyrol.com/tags/</link>
+    <link>https://gaelreyrol.dev/tags/</link>
     <description>Recent content in Tags on Gaël Reyrol</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://gaelreyrol.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gaelreyrol.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>daemon</title>
-      <link>https://gaelreyrol.com/tags/daemon/</link>
+      <link>https://gaelreyrol.dev/tags/daemon/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/daemon/</guid>
+      <guid>https://gaelreyrol.dev/tags/daemon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>openvpn</title>
-      <link>https://gaelreyrol.com/tags/openvpn/</link>
+      <link>https://gaelreyrol.dev/tags/openvpn/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/openvpn/</guid>
+      <guid>https://gaelreyrol.dev/tags/openvpn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>systemctl</title>
-      <link>https://gaelreyrol.com/tags/systemctl/</link>
+      <link>https://gaelreyrol.dev/tags/systemctl/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/systemctl/</guid>
+      <guid>https://gaelreyrol.dev/tags/systemctl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ubuntu</title>
-      <link>https://gaelreyrol.com/tags/ubuntu/</link>
+      <link>https://gaelreyrol.dev/tags/ubuntu/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/ubuntu/</guid>
+      <guid>https://gaelreyrol.dev/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cd</title>
-      <link>https://gaelreyrol.com/tags/cd/</link>
+      <link>https://gaelreyrol.dev/tags/cd/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/cd/</guid>
+      <guid>https://gaelreyrol.dev/tags/cd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ci</title>
-      <link>https://gaelreyrol.com/tags/ci/</link>
+      <link>https://gaelreyrol.dev/tags/ci/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/ci/</guid>
+      <guid>https://gaelreyrol.dev/tags/ci/</guid>
       <description></description>
     </item>
     
     <item>
       <title>devops</title>
-      <link>https://gaelreyrol.com/tags/devops/</link>
+      <link>https://gaelreyrol.dev/tags/devops/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/devops/</guid>
+      <guid>https://gaelreyrol.dev/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jenkins</title>
-      <link>https://gaelreyrol.com/tags/jenkins/</link>
+      <link>https://gaelreyrol.dev/tags/jenkins/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/jenkins/</guid>
+      <guid>https://gaelreyrol.dev/tags/jenkins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rancher</title>
-      <link>https://gaelreyrol.com/tags/rancher/</link>
+      <link>https://gaelreyrol.dev/tags/rancher/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/rancher/</guid>
+      <guid>https://gaelreyrol.dev/tags/rancher/</guid>
       <description></description>
     </item>
     
     <item>
       <title>terraform</title>
-      <link>https://gaelreyrol.com/tags/terraform/</link>
+      <link>https://gaelreyrol.dev/tags/terraform/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/terraform/</guid>
+      <guid>https://gaelreyrol.dev/tags/terraform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>coffre-fort</title>
-      <link>https://gaelreyrol.com/tags/coffre-fort/</link>
+      <link>https://gaelreyrol.dev/tags/coffre-fort/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/coffre-fort/</guid>
+      <guid>https://gaelreyrol.dev/tags/coffre-fort/</guid>
       <description></description>
     </item>
     
     <item>
       <title>entreprise</title>
-      <link>https://gaelreyrol.com/tags/entreprise/</link>
+      <link>https://gaelreyrol.dev/tags/entreprise/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/entreprise/</guid>
+      <guid>https://gaelreyrol.dev/tags/entreprise/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hashicorp</title>
-      <link>https://gaelreyrol.com/tags/hashicorp/</link>
+      <link>https://gaelreyrol.dev/tags/hashicorp/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/hashicorp/</guid>
+      <guid>https://gaelreyrol.dev/tags/hashicorp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>secrets</title>
-      <link>https://gaelreyrol.com/tags/secrets/</link>
+      <link>https://gaelreyrol.dev/tags/secrets/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/secrets/</guid>
+      <guid>https://gaelreyrol.dev/tags/secrets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>startup</title>
-      <link>https://gaelreyrol.com/tags/startup/</link>
+      <link>https://gaelreyrol.dev/tags/startup/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/startup/</guid>
+      <guid>https://gaelreyrol.dev/tags/startup/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vault</title>
-      <link>https://gaelreyrol.com/tags/vault/</link>
+      <link>https://gaelreyrol.dev/tags/vault/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/vault/</guid>
+      <guid>https://gaelreyrol.dev/tags/vault/</guid>
       <description></description>
     </item>
     
     <item>
       <title>crowdfunding</title>
-      <link>https://gaelreyrol.com/tags/crowdfunding/</link>
+      <link>https://gaelreyrol.dev/tags/crowdfunding/</link>
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/crowdfunding/</guid>
+      <guid>https://gaelreyrol.dev/tags/crowdfunding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kickstarter</title>
-      <link>https://gaelreyrol.com/tags/kickstarter/</link>
+      <link>https://gaelreyrol.dev/tags/kickstarter/</link>
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/kickstarter/</guid>
+      <guid>https://gaelreyrol.dev/tags/kickstarter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>projects</title>
-      <link>https://gaelreyrol.com/tags/projects/</link>
+      <link>https://gaelreyrol.dev/tags/projects/</link>
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/projects/</guid>
+      <guid>https://gaelreyrol.dev/tags/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>lancement</title>
-      <link>https://gaelreyrol.com/tags/lancement/</link>
+      <link>https://gaelreyrol.dev/tags/lancement/</link>
       <pubDate>Mon, 03 Apr 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/tags/lancement/</guid>
+      <guid>https://gaelreyrol.dev/tags/lancement/</guid>
       <description></description>
     </item>
     

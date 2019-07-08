@@ -1,4 +1,4 @@
-baseURL = "https://gaelreyrol.com"
+baseURL = "https://gaelreyrol.dev"
 title = "Gaël Reyrol"
 theme = "coder"
 languageCode = "fr"
@@ -57,7 +57,7 @@ disqusShortname = "gaelreyrol"
 [[params.social]]
     name = "Twitter"
     weight = 3
-    url = "https://twitter.com/GaelReyrol"
+    url = "https://twitter.com/GaelReyrolDev"
     icon = "fab fa-twitter fa-2x"
 [[params.social]]
     name = "LinkedIn"

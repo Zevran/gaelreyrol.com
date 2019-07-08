@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>devops on Gaël Reyrol</title>
-    <link>https://gaelreyrol.com/tags/devops/</link>
+    <link>https://gaelreyrol.dev/tags/devops/</link>
     <description>Recent content in devops on Gaël Reyrol</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Wed, 06 Sep 2017 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://gaelreyrol.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gaelreyrol.dev/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Reprise des hostilités</title>
-      <link>https://gaelreyrol.com/posts/reprise-des-hostilites/</link>
+      <link>https://gaelreyrol.dev/posts/reprise-des-hostilites/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://gaelreyrol.com/posts/reprise-des-hostilites/</guid>
+      <guid>https://gaelreyrol.dev/posts/reprise-des-hostilites/</guid>
       <description>Je ne peux pas dire que cet été fusse très productif coté rédaction mais en même temps ce n&amp;rsquo;était pas une mauvaise chose en soi.
 Ces trois derniers mois m&amp;rsquo;ont permis de pousser à fond mes connaissances sur Terraform, de revoir complètement l&amp;rsquo;utilisation de Jenkins en tant qu&amp;rsquo;outil de déploiement &amp;amp; d&amp;rsquo;intégration continue, de découvrir Rancher une plateforme de gestion de conteneurs et enfin de partir une petite semaine dans la cambrousse entre Saint-Émilion et Bordeaux historie de me reposer un peu les neurones et de faire bronzette avec ma bouée flamant rose.</description>
     </item>
