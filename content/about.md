@@ -14,7 +14,7 @@ Vous pouvez me retrouver sur :
 
 - [Github](https://github.com/Zevran)
 - [Gitlab](https://gitlab.com/Zevran)
-- [Twitter](https://twitter.com/GaelReyrol)
+- [Twitter](https://twitter.com/GaelReyrolDev)
 - [Linkedin](https://linkedin.com/in/gaelreyrol)
 - [Keybase](https://keybase.io/zevran)
 - [Brow Bag Lunch](http://www.brownbaglunch.fr/baggers.html#gael-reyrol)
@@ -23,4 +23,4 @@ Vous pouvez me retrouver sur :
 
 <!-- Vous abonnez à ma newsletter 'Brain Wash' sur [Tinyletter](https://tinyletter.com/Zevran). -->
 
-Et me contacter à l'adresse suivante -> [me@gaelreyrol.com](mailto:me@gaelreyrol.dev)
+Et me contacter à l'adresse suivante -> [me@gaelreyrol.dev](mailto:me@gaelreyrol.dev)
