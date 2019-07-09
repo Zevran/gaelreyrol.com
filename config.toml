@@ -49,31 +49,43 @@ disqusShortname = "gaelreyrol"
     weight = 1
     url = "https://github.com/Zevran"
     icon = "fab fa-github fa-2x"
+    rel = "me"
+    target = "_blank"
 [[params.social]]
     name = "Gitlab"
     weight = 2
     url = "https://gitlab.com/Zevran"
     icon = "fab fa-gitlab fa-2x"
+    rel = "me"
+    target = "_blank"
 [[params.social]]
     name = "Twitter"
     weight = 3
     url = "https://twitter.com/GaelReyrolDev"
     icon = "fab fa-twitter fa-2x"
+    rel = "me"
+    target = "_blank"
 [[params.social]]
     name = "LinkedIn"
     weight = 4
     url = "https://linkedin.com/in/gaelreyrol"
     icon = "fab fa-linkedin fa-2x"
+    rel = "me"
+    target = "_blank"
 [[params.social]]
     name = "Keybase"
     weight = 5
     url = "https://keybase.io/zevran"
     icon = "fab fa-keybase fa-2x"
+    rel = "me"
+    target = "_blank"
 [[params.social]]
     name = "Brown Bag Lunch"
     weight = 6
     url = "http://www.brownbaglunch.fr/baggers.html#gael-reyrol"
     icon = "fab fa-utensils fa-2x"
+    rel = "me"
+    target = "_blank"
 
 [[menu.main]]
     name = "Blog"
