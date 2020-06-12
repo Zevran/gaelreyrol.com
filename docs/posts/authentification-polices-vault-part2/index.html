@@ -19,8 +19,8 @@ Dans le guide précédent j&rsquo;ai passé en revue les grands principes de Vau
 Dans le guide précédent j&rsquo;ai passé en revue les grands principes de Vault qui font de lui un outil sûr et adéquat pour gérer ses secrets en entreprise ainsi que les étapes de base nécessaire à son utilisation en terminant par la création, la lecture et la suppression d&rsquo;un secret. Si vous ne connaissez pas Vault et que vous n&rsquo;avez pas lu la partie précédente, je vous conseille d&rsquo;aller y faire un tour pour démarrer sur de bonnes bases dans ce guide." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gaelreyrol.dev/posts/authentification-polices-vault-part2/" />
-<meta property="article:published_time" content="2017-06-07T00:00:00&#43;02:00"/>
-<meta property="article:modified_time" content="2017-06-07T00:00:00&#43;02:00"/>
+<meta property="article:published_time" content="2017-06-07T00:00:00+02:00" />
+<meta property="article:modified_time" content="2017-06-07T00:00:00+02:00" />
 
 
     
@@ -55,7 +55,7 @@ Dans le guide précédent j&rsquo;ai passé en revue les grands principes de Vau
     <link rel="icon" type="image/png" href="https://gaelreyrol.dev/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://gaelreyrol.dev/images/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.72.0" />
   </head>
 
   <body class=" ">
@@ -136,47 +136,31 @@ Dans le guide précédent j&rsquo;ai passé en revue les grands principes de Vau
       </header>
 
       <div>
-        
-
-<h2 id="introduction">Introduction</h2>
-
+        <h2 id="introduction">Introduction</h2>
 <p>C&rsquo;est parti pour un second tutoriel !</p>
-
 <p>Dans le guide précédent j&rsquo;ai
 passé en revue les grands principes de Vault qui font de lui un outil sûr et adéquat
 pour gérer ses secrets en entreprise ainsi que les étapes de base nécessaire à son
 utilisation en terminant par la création, la lecture et la suppression d&rsquo;un secret.
 Si vous ne connaissez pas Vault et que vous n&rsquo;avez pas lu la partie précédente, je vous
 conseille d&rsquo;aller y faire un tour pour démarrer sur de bonnes bases dans ce guide.</p>
-
 <p><a href="https://gaelreyrol.com/2017/05/08/gerer_ses_secrets_vault">Gérer ses secrets avec Vault - 1ère partie</a></p>
-
 <p>Dans ce tutoriel nous allons voir comment il est possible de lier Vault à un système
 d&rsquo;authentification afin de contrôler l&rsquo;accès aux secrets via des polices.</p>
-
 <h2 id="pas-à-pas">Pas à Pas</h2>
-
-<h3 id="les-backends-d-authentification">Les &ldquo;Backends d&rsquo;authentification&rdquo;</h3>
-
-<p>Les <strong><em>backends d&rsquo;authentification</em></strong> sont les modules permettant au client Vault de s&rsquo;authentifier
+<h3 id="les-backends-dauthentification">Les &ldquo;Backends d&rsquo;authentification&rdquo;</h3>
+<p>Les <em><strong>backends d&rsquo;authentification</strong></em> sont les modules permettant au client Vault de s&rsquo;authentifier
 et de s&rsquo;assigner une identité afin d&rsquo;accèder aux secrets selon des polices bien précises.</p>
-
 <p>Il existe différents backends répondant à des besoins différents. Par exemple on utilisera plus facilement le backend <a href="https://www.vaultproject.io/docs/auth/ldap.html">LDAP</a> pour gérer l&rsquo;accès utilisateur si votre entreprise dispose d&rsquo;un annuaire LDAP. En revanche on privilégira le backend
 <a href="https://www.vaultproject.io/docs/auth/approle.html">AppRole</a> pour un accès programmatique ou machine.</p>
-
 <p>Voici la liste des différents <a href="https://www.vaultproject.io/docs/auth/index.html">backends d&rsquo;authentification</a>.</p>
-
 <p>Pour les besoins du tutoriel nous utiliserons le backend <a href="https://www.vaultproject.io/docs/auth/userpass.html">Username &amp; Password</a>, il nous permettera de créer facilement des utilisateurs enregistrés sur le serveur Vault.</p>
-
-<h3 id="configuration-du-backend-username-password">Configuration du backend &ldquo;Username &amp; Password&rdquo;</h3>
-
+<h3 id="configuration-du-backend-username--password">Configuration du backend &ldquo;Username &amp; Password&rdquo;</h3>
 <p>N&rsquo;oubliez pas de démarrer un serveur local Vault en mode développement, les étapes qui vont suivre ne doivent surtout pas être exécutées sur un serveur Vault en production. Si vous ne savez pas comment faire, référez-vous au <a href="https://gaelreyrol.com/2017/05/08/gerer_ses_secrets_vault">premier tutoriel</a> de cette série.</p>
-
 <h4 id="activation-du-backend">Activation du backend</h4>
-
-<p>Pour activer le backend <strong><em>Username &amp; Password</em></strong>, vous devez d&rsquo;abord être authentifié en tant que <strong><em>root</em></strong>. Vérifiez que vous êtes bien authentifié en tant que tel avec la commande :</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault token-lookup</code></pre></div>
-<p>Vous devriez voir apparaître au niveau de la clé <strong><em>policies</em></strong> la valeur <strong><em>root</em></strong>.</p>
+<p>Pour activer le backend <em><strong>Username &amp; Password</strong></em>, vous devez d&rsquo;abord être authentifié en tant que <em><strong>root</strong></em>. Vérifiez que vous êtes bien authentifié en tant que tel avec la commande :</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault token-lookup
+</code></pre></div><p>Vous devriez voir apparaître au niveau de la clé <em><strong>policies</strong></em> la valeur <em><strong>root</strong></em>.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Key             	Value
 ---             	-----
 accessor        	15a5099a-19e2-cfd0-86b5-5ec51ddbbf51
@@ -191,57 +175,51 @@ num_uses        	<span style="color:#2aa198">0</span>
 orphan          	<span style="color:#b58900">true</span>
 path            	auth/token/root
 policies        	<span style="color:#719e07">[</span>root<span style="color:#719e07">]</span>
-ttl             	<span style="color:#2aa198">0</span></code></pre></div>
-<p>Si ce n&rsquo;est pas le cas, arrêtez le serveur Vault, supprimez le fichier <code>.vault-token</code> à la racine de votre <code>$HOME</code>, relancez votre terminal et redémarrez le serveur.</p>
-
+ttl             	<span style="color:#2aa198">0</span>
+</code></pre></div><p>Si ce n&rsquo;est pas le cas, arrêtez le serveur Vault, supprimez le fichier <code>.vault-token</code> à la racine de votre <code>$HOME</code>, relancez votre terminal et redémarrez le serveur.</p>
 <p>Vous pouvez maintenant activer le backend en utilisant la commande <code>vault auth-enable</code>.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault auth-enable userpass</code></pre></div>
-<p>Vault vous informera que vous le backend a été activé avec succès.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Successfully enabled <span style="color:#2aa198">&#39;userpass&#39;</span> at <span style="color:#2aa198">&#39;userpass&#39;</span>!</code></pre></div>
-<p>À noter que Vault a activé <strong><em>userpass</em></strong> sur le point de montage <strong><em>userpass</em></strong>, cela veut dire que vous pouvez monter plusieurs même backends d&rsquo;authentification mais avec un point de montage différent en utilisant l&rsquo;option <code>-path=&lt;path&gt;</code>.</p>
-
-<p>Pour lister les méthodes d&rsquo;authentification vous pouvez pouvez utiliser la commande <code>vault auth -methods</code>. Vous devriez voir apparaître la méthode <strong><em>userpass</em></strong> :</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault auth-enable userpass
+</code></pre></div><p>Vault vous informera que vous le backend a été activé avec succès.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Successfully enabled <span style="color:#2aa198">&#39;userpass&#39;</span> at <span style="color:#2aa198">&#39;userpass&#39;</span>!
+</code></pre></div><p>À noter que Vault a activé <em><strong>userpass</strong></em> sur le point de montage <em><strong>userpass</strong></em>, cela veut dire que vous pouvez monter plusieurs même backends d&rsquo;authentification mais avec un point de montage différent en utilisant l&rsquo;option <code>-path=&lt;path&gt;</code>.</p>
+<p>Pour lister les méthodes d&rsquo;authentification vous pouvez pouvez utiliser la commande <code>vault auth -methods</code>. Vous devriez voir apparaître la méthode <em><strong>userpass</strong></em> :</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Path       Type      Default TTL  Max TTL  Replication Behavior  Description
 token/     token     system       system   replicated            token based credentials
-userpass/  userpass  system       system   replicated</code></pre></div>
-<h4 id="création-d-un-utilisateur">Création d&rsquo;un utilisateur</h4>
-
+userpass/  userpass  system       system   replicated
+</code></pre></div><h4 id="création-dun-utilisateur">Création d&rsquo;un utilisateur</h4>
 <p>Pour ajouter un utilisateur il faudra créer celui-ci de la même manière qu&rsquo;un secret sauf qu&rsquo;au lieu d&rsquo;écrire dans un chemin commençant par <code>secret/</code> il faudra écrire dans <code>auth/userpass/users</code>. Vous pouvez obtenir des informations supplémentaires sur ce chemin en utilisant la commande <code>vault path-help</code>.</p>
-
 <p>Vous allez donc créer votre utilisateur en renseignant son nom d&rsquo;utilisateur à la fin du chemin, son mot de passe et les polices en paramètres.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault write auth/userpass/users/gaelreyrol <span style="color:#268bd2">password</span><span style="color:#719e07">=</span>lovedevops <span style="color:#268bd2">policies</span><span style="color:#719e07">=</span>devops</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Success! Data written to: auth/userpass/users/gaelreyrol</code></pre></div>
-<p>Hop, notre utilisateur est fin prêt ! En revanche il nous manque la police <strong><em>devops</em></strong> qui va nous servir à définir des règles d&rsquo;accès aux secrets.</p>
-
-<h4 id="création-d-une-police">Création d&rsquo;une police</h4>
-
-<p>Les polices dans Vault permettent de définir des droits très précis sur les secrets. Les secrets sont construits sous forme d&rsquo;arbre où chacun des noeuds est délémité par un <strong><em>/</em></strong>, nous allons donc pouvoir appliquer des restrictions/permissions à ceux-ci en fonction d&rsquo;une police.</p>
-
-<p>Nous avons à disposition 7 capacités décrivant toutes les actions possibles :
-- create: Création d&rsquo;un secret.
-- read: Lecture d&rsquo;un secret.
-- update: Modification d&rsquo;un secret.
-- delete: Suppression d&rsquo;un secret.
-- list: Énumération des secrets pour un chemin précis.
-- sudo: Donne accès à des chemins protégés par des droits root.
-- deny: Ne permet aucune action.</p>
-
-<p>Nous pouvons aussi définir des paramètres permis et non permis :
-- allowed_parameters
-- denied_parameters</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault write auth/userpass/users/gaelreyrol <span style="color:#268bd2">password</span><span style="color:#719e07">=</span>lovedevops <span style="color:#268bd2">policies</span><span style="color:#719e07">=</span>devops
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Success! Data written to: auth/userpass/users/gaelreyrol
+</code></pre></div><p>Hop, notre utilisateur est fin prêt ! En revanche il nous manque la police <em><strong>devops</strong></em> qui va nous servir à définir des règles d&rsquo;accès aux secrets.</p>
+<h4 id="création-dune-police">Création d&rsquo;une police</h4>
+<p>Les polices dans Vault permettent de définir des droits très précis sur les secrets. Les secrets sont construits sous forme d&rsquo;arbre où chacun des noeuds est délémité par un <em><strong>/</strong></em>, nous allons donc pouvoir appliquer des restrictions/permissions à ceux-ci en fonction d&rsquo;une police.</p>
+<p>Nous avons à disposition 7 capacités décrivant toutes les actions possibles :</p>
+<ul>
+<li>create: Création d&rsquo;un secret.</li>
+<li>read: Lecture d&rsquo;un secret.</li>
+<li>update: Modification d&rsquo;un secret.</li>
+<li>delete: Suppression d&rsquo;un secret.</li>
+<li>list: Énumération des secrets pour un chemin précis.</li>
+<li>sudo: Donne accès à des chemins protégés par des droits root.</li>
+<li>deny: Ne permet aucune action.</li>
+</ul>
+<p>Nous pouvons aussi définir des paramètres permis et non permis :</p>
+<ul>
+<li>allowed_parameters</li>
+<li>denied_parameters</li>
+</ul>
 <p>Ils permettent tout deux via un tableau d&rsquo;élément de définir les clés et valeurs pouvant être modifiées, créées, supprimées ou non. Le petit bonus étant qu&rsquo;ils supportent l&rsquo;englobement en suffixe et préfixe.</p>
-
-<p>Enfin la dernière fonctionnalité liée aux polices est le TTL maximum et minimum via les attributs :
-- min_wrapping_ttl
-- max_wrapping_ttl</p>
-
+<p>Enfin la dernière fonctionnalité liée aux polices est le TTL maximum et minimum via les attributs :</p>
+<ul>
+<li>min_wrapping_ttl</li>
+<li>max_wrapping_ttl</li>
+</ul>
 <p>Ils permettent de définir une durée vie minimum et maximum englobate des clés comprises par la police afin de forcer un élément à disparaitre ou d&rsquo;être sur que d&rsquo;autres éléments ne vont pas disparaître prématurément.</p>
-
 <p>Nous allons maintenant pouvoir créer notre première police !
-Pour cela nous allons créer un fichier <strong><em>devops.hcl</em></strong>.</p>
-
+Pour cela nous allons créer un fichier <em><strong>devops.hcl</strong></em>.</p>
 <p>Petite précision, un fichier <a href="https://github.com/hashicorp/hcl">HCL</a> est un fichier de configuration HashiCorp dérivé du JSON.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">path &#34;secret/apps/*&#34; {
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">path &#34;secret/apps/*&#34; {
   capabilities = [&#34;read&#34;, &#34;create&#34;, &#34;update&#34;, &#34;list&#34;]
 }
 
@@ -253,46 +231,38 @@ path &#34;secret/devops&#34; {
   denied_parameters = {
     &#34;root&#34; = []
   }
-}</pre></div>
-<p>Nous voici donc avec une police qui permet la lecture, la création, la mise à jour et l&rsquo;énumération sur tout ce qui sera compris dans le chemin <strong><em>secret/apps/</em></strong>. Ainsi que la capacité à créer des secrets uniquement au niveau du chemin <strong><em>secret/devops</em></strong> avec n&rsquo;importe quel nom de clé possible sauf <strong><em>root</em></strong>.</p>
-
-<p>Maintenant il ne nous reste plus qu&rsquo;à intégrer cette police dans vault. Pour cela nous allons utiliser la commande <strong><em>vault policy-write</em></strong> qui prend en premier argument le nom de la police et en deuxième le chemin vers le fichier.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault policy-write devops ./devops.hcl</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Policy &#39;devops&#39; written.</pre></div>
-<p>Vous pouvez à tout moment lister les polices dans vault via <code>vault policies</code> et afficher un police en particulier en ajouter son nom en argument.</p>
-
-<h4 id="mise-à-l-épreuve">Mise à l&rsquo;épreuve</h4>
-
+}
+</code></pre></div><p>Nous voici donc avec une police qui permet la lecture, la création, la mise à jour et l&rsquo;énumération sur tout ce qui sera compris dans le chemin <em><strong>secret/apps/</strong></em>. Ainsi que la capacité à créer des secrets uniquement au niveau du chemin <em><strong>secret/devops</strong></em> avec n&rsquo;importe quel nom de clé possible sauf <em><strong>root</strong></em>.</p>
+<p>Maintenant il ne nous reste plus qu&rsquo;à intégrer cette police dans vault. Pour cela nous allons utiliser la commande <em><strong>vault policy-write</strong></em> qui prend en premier argument le nom de la police et en deuxième le chemin vers le fichier.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault policy-write devops ./devops.hcl
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Policy &#39;devops&#39; written.
+</code></pre></div><p>Vous pouvez à tout moment lister les polices dans vault via <code>vault policies</code> et afficher un police en particulier en ajouter son nom en argument.</p>
+<h4 id="mise-à-lépreuve">Mise à l&rsquo;épreuve</h4>
 <p>Maintenant que nous avons créer notre utilisateur et notre police, nous pouvons enfin tester si notre police fonctionne correctement.</p>
-
 <p>Tout d&rsquo;abord nous devons nous authentifier avec l&rsquo;utilisateur créé plus haut, pour cela il nous faut utiliser la commande <code>vault auth</code> suivit d&rsquo;un argument <code>-method</code> permettant de préciser notre méthode d&rsquo;authentification ainsi que d&rsquo;un argument <code>-username</code>pour préciser l&rsquo;utilisateur en question. Il vous faudra renseigner le mot de passe inscrit plus haut.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault auth -method<span style="color:#719e07">=</span>userpass <span style="color:#268bd2">username</span><span style="color:#719e07">=</span>gaelreyrol
-Password <span style="color:#719e07">(</span>will be hidden<span style="color:#719e07">)</span>:</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Successfully authenticated! You are now logged in.
+Password <span style="color:#719e07">(</span>will be hidden<span style="color:#719e07">)</span>:
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Successfully authenticated! You are now logged in.
 The token below is already saved in the session. You <span style="color:#719e07">do</span> not
 need to <span style="color:#2aa198">&#34;vault auth&#34;</span> again with the token.
 token: a8fdca6b-08a6-225d-95ac-2a0dbb405643
 token_duration: <span style="color:#2aa198">2764799</span>
-token_policies: <span style="color:#719e07">[</span>default devops<span style="color:#719e07">]</span></code></pre></div>
-<p>À l&rsquo;issue de cette authentification nous voyons bien que Vault nous a attaché à la police devops au niveau du champ <strong><em>token_policies</em></strong>.</p>
-
+token_policies: <span style="color:#719e07">[</span>default devops<span style="color:#719e07">]</span>
+</code></pre></div><p>À l&rsquo;issue de cette authentification nous voyons bien que Vault nous a attaché à la police devops au niveau du champ <em><strong>token_policies</strong></em>.</p>
 <p>Pour tester notre police il nous suffit juste d&rsquo;effectuer des actions au niveau des chemins explicités dans notre fichier car Vault applique la règle de liste noire. Tout ce qui n&rsquo;est pas clairement défini est refusé par défaut.</p>
-
 <p>Quelques exemples:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault write secret/apps/postgres <span style="color:#268bd2">user</span><span style="color:#719e07">=</span>monapp <span style="color:#268bd2">password</span><span style="color:#719e07">=</span><span style="color:#719e07">$(</span>openssl rand -base64 <span style="color:#2aa198">12</span><span style="color:#719e07">)</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ vault write secret/apps/postgres <span style="color:#268bd2">user</span><span style="color:#719e07">=</span>monapp <span style="color:#268bd2">password</span><span style="color:#719e07">=</span><span style="color:#719e07">$(</span>openssl rand -base64 12<span style="color:#719e07">)</span>
 $ vault <span style="color:#b58900">read</span> secret/apps/postgres
 $ vault list secret/apps
 $ vault delete secret/apps/postgres
 $ vault list secret/devops
 $ vault write secret/devops <span style="color:#268bd2">apps</span><span style="color:#719e07">=[</span>postgres<span style="color:#719e07">]</span>
 $ vault <span style="color:#b58900">read</span> secret/devops
-$ vault write secret/devops <span style="color:#268bd2">root</span><span style="color:#719e07">=</span>test</code></pre></div>
-<p>Je vous laisse le soin de mettre à l&rsquo;épreuve Vault et de jouer avec les polices, capacités et paramètres.</p>
-
-<hr />
-
+$ vault write secret/devops <span style="color:#268bd2">root</span><span style="color:#719e07">=</span><span style="color:#b58900">test</span>
+</code></pre></div><p>Je vous laisse le soin de mettre à l&rsquo;épreuve Vault et de jouer avec les polices, capacités et paramètres.</p>
+<hr>
 <p>Ce deuxième tutoriel sur Vault est terminé, j&rsquo;espère qu&rsquo;il vous sera utile et que vous saurez vous projeter dans une utilisation professionnelle de cet outil incroyablement puissant.</p>
-
 <p>Le prochain tutoriel Vault portera sur son déploiement en production mais ça ne sera probablement pas le prochain article.</p>
-
 <p>N’hésitez pas à partager et réagir à cet article dans les commentaires ou par mail :)</p>
 
       </div>
@@ -336,7 +306,7 @@ $ vault write secret/devops <span style="color:#268bd2">root</span><span style="
     
       <p>Théoriquement, ça fonctionne.</p>
     
-     © 2019
+     © 2020
     
        · 
        <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.

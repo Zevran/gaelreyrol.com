@@ -17,8 +17,8 @@
 <meta property="og:description" content="Comment lancer un démon client OpenVPN sur Ubuntu Oui je sais c&rsquo;est mon premier tutoriel de la rentrée et celui-ci n&rsquo;a plus ou moins rien avoir avec le DevOps. Je me suis décidé à faire ce tutoriel parce que j&rsquo;ai remarqué qu&rsquo;il y avait beaucoup de tutoriels sur comment créer un serveur VPN mais quasiment aucun sur comment se connecter à ceux-ci et encore moins depuis un serveur dédié ou sans GUI." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gaelreyrol.dev/posts/daemon-openvpn-ubuntu/" />
-<meta property="article:published_time" content="2017-09-17T00:00:00&#43;02:00"/>
-<meta property="article:modified_time" content="2017-09-17T00:00:00&#43;02:00"/>
+<meta property="article:published_time" content="2017-09-17T00:00:00+02:00" />
+<meta property="article:modified_time" content="2017-09-17T00:00:00+02:00" />
 
 
     
@@ -53,7 +53,7 @@
     <link rel="icon" type="image/png" href="https://gaelreyrol.dev/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://gaelreyrol.dev/images/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.72.0" />
   </head>
 
   <body class=" ">
@@ -130,66 +130,42 @@
       </header>
 
       <div>
-        
-
-<h2 id="comment-lancer-un-démon-client-openvpn-sur-ubuntu">Comment lancer un démon client OpenVPN sur Ubuntu</h2>
-
+        <h2 id="comment-lancer-un-démon-client-openvpn-sur-ubuntu">Comment lancer un démon client OpenVPN sur Ubuntu</h2>
 <p>Oui je sais c&rsquo;est mon premier tutoriel de la rentrée et celui-ci n&rsquo;a plus ou moins rien avoir avec le DevOps.
 Je me suis décidé à faire ce tutoriel parce que j&rsquo;ai remarqué qu&rsquo;il y avait beaucoup de tutoriels sur comment
 créer un serveur <a href="https://en.wikipedia.org/wiki/Virtual_private_network">VPN</a> mais quasiment aucun sur comment se connecter à ceux-ci et encore moins depuis un serveur dédié ou sans GUI.</p>
-
 <p>De plus j&rsquo;ai quelques collègues qui travaillent sous Ubuntu et qui auraient bien eu besoin d&rsquo;un petit tuto comme celui-ci.</p>
-
 <p>Ce tutoriel est à destination de la distribution <a href="https://www.ubuntu.com/">Ubuntu</a> avec comme serveur VPN la solution <a href="https://openvpn.net/">OpenVPN</a>.</p>
-
 <p>Si vous ne disposez pas d&rsquo;un serveur OpenVPN auquel vous connecter mais que vous disposez d&rsquo;une petite <a href="https://www.raspberrypi.org/">Raspberry Pi</a> je vous recommande le site <a href="http://www.pivpn.io/">PiVPN</a> pour créer votre propre serveur.</p>
-
 <p>Travaillant sur Mac OS, j&rsquo;utilise l&rsquo;outil génial qu&rsquo;est <a href="https://www.vagrantup.com/">Vagrant</a> pour disposer d&rsquo;une machine virtuelle sous Ubuntu, si vous êtes sous Ubuntu vous pouvez bien évidemment passer les quelques étapes qui vont suivre.</p>
-
 <h4 id="installer-vagrant">Installer Vagrant</h4>
-
 <p>Pour cela rien de plus simple que se rendre sur la page des <a href="https://www.vagrantup.com/downloads.html">téléchargements</a> et de récupérer l&rsquo;installateur correspondant au système d&rsquo;exploitation de votre machine.</p>
-
 <h4 id="installer-virtualbox">Installer VirtualBox</h4>
-
 <p>Vagrant c&rsquo;est super mais tout seul il ne fera rien, pour pouvoir l&rsquo;utiliser correctement il nous faut un logiciel de virtualisation, perso je prends <a href="https://www.virtualbox.org/">VirtualBox</a> parce que c&rsquo;est gratuit et que ça fait le taff mais vous pouvez tout aussi bien choisir d&rsquo;autres <a href="https://www.vagrantup.com/intro/getting-started/providers.html">fournisseurs</a> comme VMware ou encore AWS.</p>
-
 <p>Donc même chose ici, il suffit de se rendre sur la page des <a href="https://www.virtualbox.org/wiki/Downloads">téléchargements</a> et de récupérer l&rsquo;installateur qui convient.</p>
-
 <h4 id="créer-un-machine-virtuelle-ubuntu">Créer un machine virtuelle Ubuntu</h4>
-
 <p>On ouvre une fenêtre de terminal, on se place dans le répertoire de notre choix et on lance la commande suivante.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant init ubuntu/xenial64</code></pre></div>
-<p>Cette commande configure une machine virtuelle sous Ubuntu Server 16.04 LTS.
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant init ubuntu/xenial64
+</code></pre></div><p>Cette commande configure une machine virtuelle sous Ubuntu Server 16.04 LTS.
 Je vous passe les explications sur Vagrant et ses fonctionnalités parce que ça fera l&rsquo;objet d&rsquo;un article.</p>
-
 <h4 id="lancement-de-la-machine-virtuelle">Lancement de la machine virtuelle</h4>
-
 <p>Up, c&rsquo;est comme le Port Salut c&rsquo;est écrit &hellip;.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant up</code></pre></div>
-<p>Vagrant va donc télécharger l&rsquo;image correspondante et lancer la machine virtuelle.</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant up
+</code></pre></div><p>Vagrant va donc télécharger l&rsquo;image correspondante et lancer la machine virtuelle.</p>
 <h4 id="connexion-à-la-machine-virtuelle">Connexion à la machine virtuelle</h4>
-
 <p>C&rsquo;est comme le Port Salut &hellip; ok je sors -&gt; [].</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant ssh</code></pre></div>
-<p>Nous sommes donc maintenant connecté à une machine virtuelle Ubuntu prête à servir !</p>
-
-<h4 id="installation-d-openvpn">Installation d&rsquo;OpenVPN</h4>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant ssh
+</code></pre></div><p>Nous sommes donc maintenant connecté à une machine virtuelle Ubuntu prête à servir !</p>
+<h4 id="installation-dopenvpn">Installation d&rsquo;OpenVPN</h4>
 <p>Si nous voulons pouvoir nous connecter à un serveur OpenVPN, il faut installer le paquet correspondant.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update
-sudo apt-get install openvpn</code></pre></div>
-<p>L&rsquo;installation nous permet de disposer de l&rsquo;exécutable <code>openvpn</code> et du répertoire <code>/etc/openvpn</code>. L&rsquo;exécutable sert aussi bien de serveur que de client.</p>
-
+sudo apt-get install openvpn
+</code></pre></div><p>L&rsquo;installation nous permet de disposer de l&rsquo;exécutable <code>openvpn</code> et du répertoire <code>/etc/openvpn</code>. L&rsquo;exécutable sert aussi bien de serveur que de client.</p>
 <p>C&rsquo;est dans le répertoire <code>/etc/openvpn</code> que nous allons configurer notre client OpenVPN.</p>
-
 <h4 id="configuration-du-client">Configuration du client</h4>
-
 <p>Vous devez normalement avoir à disposition un fichier de configuration OpenVPN qui vous permettra de vous connectez à votre serveur en fonction de ses configurations.</p>
-
 <p>Le mien ressemble à ça :</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">client
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">client
 dev tun
 proto udp
 remote 192.168.0.10 1194
@@ -214,59 +190,45 @@ Le contenu d&#39;un certificat au format PEM
 &lt;/cert&gt;
 &lt;key&gt;
 Le contenu d&#39;une clé privée au format PEM
-&lt;/key&gt;</pre></div>
-<p>Copiez le contenu de votre fichier de configuration dans un fichier sur votre poste, serveur ou machine virtuelle dans le répertoire <code>/etc/openpvn</code> puis testez le. Il faut absolument que l&rsquo;extension de votre fichier soit en <code>.conf</code> :)</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo openvpn --config /etc/openvpn/home.conf</code></pre></div>
-<p>Vous devriez pouvoir vous connecter sans soucis, si jamais c&rsquo;est pas le cas. Jetez un oeil aux logs, l&rsquo;erreur est généralement explicite.</p>
-
+&lt;/key&gt;
+</code></pre></div><p>Copiez le contenu de votre fichier de configuration dans un fichier sur votre poste, serveur ou machine virtuelle dans le répertoire <code>/etc/openpvn</code> puis testez le. Il faut absolument que l&rsquo;extension de votre fichier soit en <code>.conf</code> :)</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo openvpn --config /etc/openvpn/home.conf
+</code></pre></div><p>Vous devriez pouvoir vous connecter sans soucis, si jamais c&rsquo;est pas le cas. Jetez un oeil aux logs, l&rsquo;erreur est généralement explicite.</p>
 <p>Pour ma part c&rsquo;est une authentification par clé privée, je n&rsquo;ai qu&rsquo;à saisir le mot de passe de ma clé pour valider la connexion.</p>
-
 <p>Je vérifie que mon interface <code>tun</code> est bien montée.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ifconfig tun0</code></pre></div>
-<p>Paf ça passe bien, youhou !</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ifconfig tun0
+</code></pre></div><p>Paf ça passe bien, youhou !</p>
 <p>Sauf que voilà, disons que j&rsquo;ai un serveur DNS dans le même réseau local que mon serveur VPN et que je souhaitrai pouvoir accéder à des domaines locaux du type <code>git.local</code> ou <code>cozy.local</code>.</p>
-
 <p>Et bien je ne peux pas parce que les serveurs de noms n&rsquo;ont pas été mis à jour au montage de l&rsquo;interface <code>tun0</code>. Je pourrais éditer le fichier <code>/etc/resolv.conf</code> mais c&rsquo;est mal m&rsquo;voyez ? Et puis c&rsquo;est écrit dessus comme le Port Salut &hellip;</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)
-#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN</pre></div>
-<p>Heureusement pour nous, Ubuntu a pensé à joindre un ficher à l&rsquo;installation d&rsquo;OpenVPN, c&rsquo;est le fichier <code>update-resolv-conf</code> qui se trouve dans le répertoire <code>/etc/openvpn</code>.</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)
+#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN
+</code></pre></div><p>Heureusement pour nous, Ubuntu a pensé à joindre un ficher à l&rsquo;installation d&rsquo;OpenVPN, c&rsquo;est le fichier <code>update-resolv-conf</code> qui se trouve dans le répertoire <code>/etc/openvpn</code>.</p>
 <p>Il va nous permettre de mettre à jour les serveurs de noms au montage et au démontage de l&rsquo;interface <code>tun0</code>. Pour cela il nous suffit de rajouter dans notre fichier de configuration les lignes suivantes.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">up /etc/openvpn/update-resolv-conf
-down /etc/openvpn/update-resolv-conf</pre></div>
-<p>Et la ligne suivante si elle n&rsquo;est pas déjà présente pour permettre l&rsquo;exécution du fichier <code>update-resolv-conf</code>.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">security-script 2</pre></div>
-<p>Maintenant que notre fichier configure correctement les serveurs de noms, il va nous falloir fournir les identifiants de connexion au serveur VPN.</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">up /etc/openvpn/update-resolv-conf
+down /etc/openvpn/update-resolv-conf
+</code></pre></div><p>Et la ligne suivante si elle n&rsquo;est pas déjà présente pour permettre l&rsquo;exécution du fichier <code>update-resolv-conf</code>.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">security-script 2
+</code></pre></div><p>Maintenant que notre fichier configure correctement les serveurs de noms, il va nous falloir fournir les identifiants de connexion au serveur VPN.</p>
 <p><em>WOW WAIT</em> - Je sais ça peut paraître bizarre et à première vue assez risqué d&rsquo;écrire en dur ses identifiants mais c&rsquo;est le seul moyen pour permettre au démon de se connecter au serveur. Il ne faut juste pas oublier certaines précautions d&rsquo;usage.</p>
-
 <p>Mon serveur VPN est configuré pour s&rsquo;authentifier par clé donc je vais devoir rajouter la ligne suivante dans mon fichier.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">askpass /etc/openvpn/home-creds.txt</pre></div>
-<p>Je passe en paramètre à l&rsquo;option <code>askpass</code> le chemin vers le fichier contenant le mot de passe de ma clé. N&rsquo;oubliez pas de créer ce fichier et d&rsquo;y inscrire votre mot de passe.</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">askpass /etc/openvpn/home-creds.txt
+</code></pre></div><p>Je passe en paramètre à l&rsquo;option <code>askpass</code> le chemin vers le fichier contenant le mot de passe de ma clé. N&rsquo;oubliez pas de créer ce fichier et d&rsquo;y inscrire votre mot de passe.</p>
 <p>Si vous devez vous connecter avec un nom d&rsquo;utilisateur et un mot de passe, il faudra replacer l&rsquo;option <code>askpass</code> par <code>auth-user-pass</code> et remplacer le contenu du fichier correspondant par votre nom d&rsquo;utilisateur sur la première ligne et votre mot de passe sur la deuxième.</p>
-
 <p>N&rsquo;oublier pas de changer les droits d&rsquo;accès au fichier avec la commande <code>chmod</code>.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo chmod <span style="color:#2aa198">400</span> /etc/openvpn/home-creds.txt</code></pre></div>
-<p>Si on essaye de se reconnecter avec la même commande.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo openvpn --config /etc/openvpn/home.conf</code></pre></div>
-<p>BOUM, plus besoin de saisir un mot de passe ou des identifiants.</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo chmod <span style="color:#2aa198">400</span> /etc/openvpn/home-creds.txt
+</code></pre></div><p>Si on essaye de se reconnecter avec la même commande.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo openvpn --config /etc/openvpn/home.conf
+</code></pre></div><p>BOUM, plus besoin de saisir un mot de passe ou des identifiants.</p>
 <h4 id="lancement-du-démon">Lancement du démon</h4>
-
 <p>Maintenant que notre configuration est fin prête nous pouvons lancer le client OpenVPN en démon via un service. Eh oui encore une fois Ubuntu a eu la bonne idée de fournir un script de type <a href="https://doc.ubuntu-fr.org/upstart">upstart</a>.</p>
-
 <p>Pour lancer notre démon il suffit juste de démarrer le service OpenVPN accompagné du nom de notre fichier de configuration.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo service openvpn@home start</code></pre></div>
-<p>Si jamais vous n&rsquo;arrivez pas à vous connecter, vous pouvez accéder aux logs du démon avec <code>journalctl</code> pour essayer de trouver la source de l&rsquo;erreur.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo journalctl -u openvpn@home.service</code></pre></div>
-<p><em>BONUS</em></p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo service openvpn@home start
+</code></pre></div><p>Si jamais vous n&rsquo;arrivez pas à vous connecter, vous pouvez accéder aux logs du démon avec <code>journalctl</code> pour essayer de trouver la source de l&rsquo;erreur.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo journalctl -u openvpn@home.service
+</code></pre></div><p><em>BONUS</em></p>
 <p>Puisque c&rsquo;est une service, on peut très facilement l&rsquo;activer pour qu&rsquo;il se lance au démarrage de la machine avec la commande <code>systemctl</code>.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl <span style="color:#b58900">enable</span> openvpn@home.service</code></pre></div>
-<p>Et voilà, j&rsquo;espère que ça vous a plus et que ça vous sera utile surtout !</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl <span style="color:#b58900">enable</span> openvpn@home.service
+</code></pre></div><p>Et voilà, j&rsquo;espère que ça vous a plus et que ça vous sera utile surtout !</p>
 <p>Encore une fois n&rsquo;hésitez pas à me faire part de vos avis ou problèmes dans les commentaires je serais très heureux de pouvoir y répondre !</p>
 
       </div>
@@ -310,7 +272,7 @@ down /etc/openvpn/update-resolv-conf</pre></div>
     
       <p>Théoriquement, ça fonctionne.</p>
     
-     © 2019
+     © 2020
     
        · 
        <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.

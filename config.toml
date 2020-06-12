@@ -47,21 +47,21 @@ disqusShortname = "gaelreyrol"
 [[params.social]]
     name = "Github"
     weight = 1
-    url = "https://github.com/Zevran"
+    url = "https://github.com/GaelReyrol"
     icon = "fab fa-github fa-2x"
     rel = "me"
     target = "_blank"
 [[params.social]]
     name = "Gitlab"
     weight = 2
-    url = "https://gitlab.com/Zevran"
+    url = "https://gitlab.com/GaelReyrol"
     icon = "fab fa-gitlab fa-2x"
     rel = "me"
     target = "_blank"
 [[params.social]]
     name = "Twitter"
     weight = 3
-    url = "https://twitter.com/GaelReyrolDev"
+    url = "https://twitter.com/GaelReyrol"
     icon = "fab fa-twitter fa-2x"
     rel = "me"
     target = "_blank"
